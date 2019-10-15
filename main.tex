@@ -1,0 +1,36 @@
+\documentclass{article}
+
+\usepackage{listings}
+
+\author{Erik Pillon}
+\title{Git Guide: from zero to hero}
+\date{\texttt{erik.pillon@uni.lu}}
+
+\begin{document}
+\begin{abstract}
+	This is a list of tricks and nice commands that I collected during my experience with git.
+\end{abstract}	
+
+\section{Configuring a remote for a fork}
+After forking a repository and branching the project, we would like to keep the \texttt{master} branch to be updated with the original repository. 
+This can be easily achieved in two steps: 
+\begin{itemize}
+	\item You must configure a remote that points to the upstream repository in Git to sync changes you make in a fork with the original repository. This also allows you to sync changes made in the original repository with the fork.
+	\item Sync a fork of a repository to keep it up-to-date with the upstream repository.
+\end{itemize}
+
+\subsection{Add an \texttt{upstream} repository}
+For listing the current configured remote repository for your fork we have\\ %\vspace{0.1cm}
+
+\texttt{git remote -v}\\ %\vspace{0.2cm}
+
+and then specify a new remote upstream repository that will be synced with the fork:\\
+
+\texttt{git remote add upstream https://github.com/\textit{ORIGINAL\_REPOSITORY}.git}\\
+
+We can now verify the new upstream repository you've specified for your fork; if everything is successful, we'll have now 4 entries for the following command\\ %\vspace{0.1cm}
+
+\texttt{git remote -v}
+\subsection{Syncing a fork}
+
+\end{document}
